@@ -36,7 +36,7 @@ pipeline {
                     sh '''
                     git config --global user.email "shrij68i@gmail.com"
                     git config --global user.name "shrij68i"
-                    git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/your-username/your-repo.git
+                    git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@https://github.com/Shrij34/helloworld.git
                     git add .
                     git commit -m "Automated commit by Jenkins"
                     git push origin main
