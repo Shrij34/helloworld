@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the project...'
-                    sh 'python hello.py'
+                    sh 'python3 hello.py'
                 }
             }
         }
