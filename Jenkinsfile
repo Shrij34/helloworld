@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        EMAIL_RECIPIENT = 'your-email@example.com'
+        GITHUB_TOKEN = credentials('github-token')
+        EMAIL_RECIPIENT = 'shrij68i@gmail.com'
     }
 
     stages {
@@ -33,8 +34,9 @@ pipeline {
                 script {
                     echo 'Deploying to GitHub...'
                     sh '''
-                    git config --global user.email "you@example.com"
-                    git config --global user.name "Your Name"
+                    git config --global user.email "shrij68i@gmail.com"
+                    git config --global user.name "shrij68i"
+                    git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/your-username/your-repo.git
                     git add .
                     git commit -m "Automated commit by Jenkins"
                     git push origin main
